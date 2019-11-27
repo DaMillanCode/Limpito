@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/stylecalc.css">
+</head>
+<body>
+    <table id="calc" border="5">
+        <tr>
+            <th colspan="4" align="right" width="50%" >0</th>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>+</td>
+            <td>%</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td rowspan="2">=</td>
+        </tr>
+        <tr>
+            <td colspan="2">0</td>
+            <td>.</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <hr>
+    <div class="fila">
+        <div class="boton" onclick="insertarValor(7)">7</div>
+        <div class="boton" onclick="insertarValor(8)">8</div>
+        <div class="boton" onclick="insertarValor(9)">9</div>
+        <div class="boton" onclick="insertarValor('-')">-</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* Estilos de CSS
+Selector { 
+Puede ser el nombre de la etiqueta, el ID, la clase o el atributo 
+Propiedad: Valor;
+Puede ser de Objeto, Forma, Texto o Color y finaliza con Punto y coma.
+
+A todo se le llama Declaracion (Propiedad: Valor;).
+}
+
+#ID_del_objeto {
+  Llamamos a un estilo a travez del ID colocando la almohadilla # antes del nombre.
+}
+
+.CLASE_del_objeto {
+  Llamamos al estilo de un grupo de objetos con la clase colocando . antes del nombre.
+}
+
+#INTRO .PRIMER em {
+}
+Aqui apuntamos al style del <em> </em> de la clase="PRIMER" que se encuentra dentro del id="INTRO". Logrando trabajar en el style preciso.
+
+
+Las propiedades CSS mas comunes son:
+  width: Ancho;
+  height: Alto;
+  background: Color de fondo;
+  margin: Margen externo;
+  border: Color y Tipo de borde; Requiere 3 valores: Ancho de borde, Tipo de borde y Color. Por ej: 5px solid blue;
+  padding: Margen interno;
+*/
+
+/* 
+Las UNIDADES DE MEDICION en CSS: Unidades ABSOLUTAS y Unidades RELATIVAS.-
+
+Las unidades ABSOLUTAS estan completamente definidas y no dependen de ningun otro valor de referencia.
+    cm: Aumenta el tamaño de nuestro texto o elemento en CENTIMETROS.
+    mm: Aumenta el tamaño de nuestro texto o elemento en MILIMETROS.
+    in: Aumenta el tamaño de nuestro texto o elemento en PULGADAS (1in = 96px = 2.54cm).
+    px: Aumenta el tamaño de nuestro texto o elemento en PIXELES. Tambien se clasifica como unidad RELATIVA.
+    pt: Aumenta el tamaño de nuestro texto o elemento en PUNTOS (1pt = 1/72 de 1in).
+    pc: Aumenta el tamaño de nuestro texto o elemento en PICAS (1pc = 12pt aproximadamente).
+
+Las unidades RELATIVAS son mas flexibles y se expresan en forma de PORCENTAJE %.
+    Se subdividen en 2 GRUPOS: Relativas a la TIPOGRAFIA y Relativas al VIEWPORT:
+      TIPOGRAFIA:
+          em:  Relativo al tamaño de fuente de un elemento. Por ej: (font-size: 5em;) el texto aumentara 5 veces su tamaño en relacion al tamaño usado por defecto.
+          ex:  Aumenta el tamaño de la fuente en relacion a la altura.
+          Rem: Igual que "em" pero con la diferencia que actua en la raiz. O sea en la letra que se este usando por defecto.
+      VIEWPORT:
+          vw:   Relativo a la ViewWidth (Anchura) del viewport.
+          vh:   Relativo a la ViewHeight (Altura) del viewport.
+          vmin: Entre vw y vh tomara la que tenga menor valor.
+          vmax: Entre vw y vh tomara la que tenga mayor valor.
+*/
+
+/* 
+PROPIEDADES en CSS:
+
+  Propiedades del COLOR.
+    Existen 3 maneras diferentes de aplicar color a un elemento en CSS:
+
+    1.- Colocando "background: Color_Name;"
+    2.- Hexadecimal: Ingresando #xXxXxX; (Almohadilla # y 6 digitos. Ej: #ff0012).
+    3.- Sintaxis RGBA: Utilizando 4 pares de numeros separados por coma. (RED,GREEN,BLUE,TRANSPARENCIA).
+
+  Propiedades de UBICACION. Wireframe o Maqueta.
+        Existen 5 tipos de posicion para el elemento:
+
+        position: static;
+          El elemento no se vera afectado por las propiedades y seguira la fluidez natural del diseño del documento HTML.-
+        position: relative;
+          El elemento con posicion relativa se vera de manera relativa a su posicion original.-
+        position: fixed;
+          El elemento fixed permanecera fijo donde se ubique y no se vera afectado por los movimientos de scrol.-
+        position: absolute;
+          El elemento absolute se sobrepondra sobre cualquier otro elemento.-
+        position: sticky;
+          Se comportara como un elemento relativo hasta que el scroll baje y pasara a ser fixed para mantenerse siempre en el viewport.-
+
+  Propiedades del TEXTO.
+    font-family: FUENTE; Cambiamos el estilo de fuente del texto.
+    font-size: Valor; Sirve para modificar el tamaño de una fuente.
+    text-align: Valor; Cambia la alineacion del texto.
+    color: Valor; Modifica el color del texto.
+
+    Los diferentes simbolos pueden ser consultados en https://ascii.cl/es/codigos-html.htm
+
+  Propiedades de LISTA.
+    list-style-position: outside; Los marcadores de una lista estaran fuera de la tabla.
+    list-style-position: inside; Los marcadores de una lista estaran dentro de la tabla.
+    list-style-type: Valor; Indica el tipo de marcador que deseamos para una lista. (Usar el valor "none" elimina el marcador)
+    list-style-image: URL; Modifica el marcador por una imagen.
+
+  Propiedades de LINK.
+    a:link {color:Valor;} Link sin visitar.
+    a:visited {color:Valor} Link visitado.
+    a:hover {color:Valor} Mouse over link.
+    a:active {color:Valor} Cuando haces click en el link.
+*/
+
+/*
+BOX MODELING: MODELADO DE CAJAS.-
+
+.box {
+  width: 680px;                 Ancho de la CAJA.
+  height: 400px;                Alto de la CAJA.
+  padding: 80px;                Margen interno de la CAJA.
+  margin: 80px;                 Margen externo de la CAJA.
+  border: 80px solid magenta;   Borde, estilo, color de la CAJA.
+}
+    BOX MODELING es aprender la forma en que el navegador organiza los elementos dentro de la pantalla.
+    En HTML cada elemento que definimos dentro del documento HTML se mostrara como una CAJA, con 4 lados,
+    y compuesta de 4 o 5 secciones
+
+                          __________________________________                    
+                          | ___________MARGIN_____________  |
+                          | | _________OUTLINE__________  | |
+                          | | | _______BORDER_________  | | |
+                          | | | | _____PADDING______  | | | |
+                          | | | | |                 | | | | |
+                          | | | | |   CONTENIDO     | | | | |
+                          | | | | |_________________| | | | |
+                          | | | |_____________________| | | |
+                          | | |_________________________| | |
+                          | |_____________________________| |
+                          |_________________________________|
+
+    CONTENIDO:  Es el "contenido" a mostrar, video, imagen, un texto. Esta seccion se ajusta a la altura
+                y ancho del contenido a mostrar, entre mayor sean los elementos a mostrar, mayor sera.
+                El tamaño de esta seccion se puede modificar con HEIGHT, WIDTH, MAXHEIGHT, MAXWIDTH, 
+                MINHEIGHT, MINWIDTH.
+    PADDING:    Es una separacion que existe entre el CONTENIDO y el BORDE, se utiliza para dar una apariencia
+                mas estetica y que el CONTENIDO no este pegado al BORDE. Esta delimitado por el BORDER.
+                Se puede establecer el PADDING con PADDING, PADDING-BOTTOM, PADDING-TOP, PADDING-LEFT, PADDING-RIGHT. 
+    BORDER:     Es una linea que se dibuja al final de la CAJA, se utiliza para darle una apariencia estetica
+                a la caja. Es la ultima parte visible de la CAJA.
+                Se puede establecer con BORDER, BORDER-TOP, BORDER-BOTTOM, BORDER-LEFT, BORDER-RIGHT
+                Los tipos de linea disp son: SOLID, DOTTED, DASHED, DOUBLE, GROOVE, RIDGE, INSET, OUTSET.
+                Se puede definir el radio del borde usando: BORDER-TOP-LEFT-RADIUS: 50px 50px;
+    MARGIN:     El MARGIN es la ultima seccion de la CAJA, y se puede ver como una separacion invisible que
+                ayuda a separar de otro elemento. Cuando definimos el BACKGROUND del elemento, este no se 
+                propaga al MARGIN.
+                El MARGIN se puede definir con: MARGIN, MARGIN-TOP, MARGIN-BOTTOM, MARGIN-LEFT, MARGIN-RIGHT.
+    OUTLINE:    El outline hace que los elementos que ganan el foco generen una ligera aura que los rodea.
+                Se establece con la propiedad OUTLINE, y se puede modificar el ANCHO, COLOR y ESTILO.
+*/
+
+
+.cabe{
+  background: rgb(33, 124, 15);
+  background-size: 50px;
+  color: rgba(2, 5, 110, 0.26);
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ol.asd1 {
+  text-shadow: aqua,15px;
+    
+  text-align: center;
+  display: block;
+  list-style-type: hangul;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 15px;
+  margin-right: 0;
+  padding-left: 40px;
+}
+ol.asd2 {
+    text-align: right;
+    display: -moz-box;
+    list-style-type: hangul;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 15px;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+line.linea1{
+    color: rgb(180, 0, 0);
+    width: 10px;
+}
+
+.triangulo-equilatero-bottom-left {
+  width: 0;
+  height: 0;
+  text-align: end;
+  color: transparent;
+  border-right: 200px solid transparent;
+  border-top: 200px solid transparent;
+  border-left: 200px solid #f0ad4e;
+  border-bottom: 200px solid #f0ad4e;
+}

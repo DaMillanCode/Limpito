@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- Etiqueta simple que facilita informacion al server -->
+
+<html lang="es">
+<!-- Esta etiqueta encierra todo el documento, el atributo "Lang" indica el Lenguaje -->
+
+<head>
+    <!-- Etiqueta que guarda informacion importante para buscadores y navegadores, no es visualizada por el usuario -->
+
+    <meta charset="UTF-8">
+    <!-- Establece que nuestro documento utiliza caracteres en ESPAÑOL -->
+
+    <meta name="autor" content="DaMillanCode">
+    <!-- Especifica el autor del documento -->
+
+    <meta name="Descripcion" content="Agregar aqui descripcion del site">
+    <!-- Establece la descripcion del sitio, utilizada por los buscadores -->
+    
+    <meta name="keywords" content="Palabras clave">
+    <!-- Establece palabras clave, tambien son necesarias para mejorar la precision en los buscadores -->
+
+    <link rel="icon" href="img/favicon.ico">
+    <!-- Establece el icono usado por el documento -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Da instrucciones al navegador de como controlar el escalado y las dimensiones del documento -->
+    <!-- Las etiquetas <meta> son consultadas por los navegadores -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- CONSULTAR SOBRE ESTA ETIQUETA DE ARRIBA -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>ETIQUETAS Y DATOS</title>
+    <!-- Titulo del documento -->
+
+<!-- CSS -->
+    <style>
+        p {
+            background-color: grey;
+        }
+    /* Se puede agregar CSS en el documento HTML mediante la etiqueta style
+       Se puede agregar cualquier propiedad y valor de CSS */
+       #parra1 {
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           background-color: indigo;
+           color: khaki;
+           border-top-left-radius: 5px 5px;
+           border-bottom-left-radius: 5px 5px;
+           border-top-right-radius: 5px 5px;
+           border-bottom-right-radius: 5px 5px;
+           text-align: center;
+           border: 5px solid mediumaquamarine;
+           
+           justify-content: end;
+       }
+    </style>
+
+</head>
+
+<body>
+<!-- HEADER Se utiliza para definir el encabezado de una pagina -->
+    <header class="cabe"><b> INSTRUCTIVO Y ETIQUETAS WEB</b></header>
+
+<!-- NAV se usa para definir MENU -->
+    <nav style="color:greenyellow; border-block-end-style: double; grid-row-end: auto;">
+        <ul>
+            <li>HOME</li>
+            <li><a href="">Pagina 2</a></li>
+            <li><button>Pagina 3</button></li>
+            <li><div>Pagina 4</div></li>
+            <li>Pagina 5</li>
+        </ul>
+    </nav>
+    <!-- No es recomendable usar HEADINGS solo para resaltar texto por que los buscadores indexan el HEADING -->
+    <h1>Esta es una CABECERA 1</h1>
+    <aside>
+    <div class="triangulo-equilatero-bottom-left">
+        <p>Soy un triangulo</p>
+
+    </div>
+    <iframe src="https://www.youtube.com/watch?v=85VuymUQWLA&list=PL652DDE687FC4453C&index=6" frameborder="1" allowfullscreen></iframe>
+    <!-- La etiqueta <iframe></iframe> permite incrustar videos, mapas, paginas web de terceros en el documento -->
+
+    <!-- Con <aside></aside> se identifican columnas del documento -->
+    </aside>
+
+    <section>
+    <!-- La etiqueta <section></section> se usa para identificar la seccion principal del documento -->
+
+<!-- ETIQUETA <ARTicle></ARTicle> -->
+    <article>
+    <!-- La etiqueta <article></article> se usa para designar el cuerpo del documento -->
+
+    <!-- Diseños de texto y parrafos -->
+    <p id="parra1">Este texto esta modificado con CSS dentro del documento</p>
+    <p><b>Este texto saldra en NEGRITA</b></p>
+    <p><big>Este texto saldra en BIG</big></p>
+    <p><em>Este texto es EMBED</em></p>         <!-- La etiqueta "<em></em>" da enfasis a los buscadores -->
+    <p><I>Este texto saldra en ITALICA</I></p>
+    <p><small>Este texto saldra en SMALL</small></p>
+    <p><strong>Este texto saldra en STRONG</strong></p> <!-- La etiqueta <strong></strong> da enfasis a los buscadores -->
+    <p><sub>Este texto saldra Sustrico</sub></p>
+    <p><sup>Este texto saldra Superscrito</sup></p>
+    <p><ins>Este texto saldra INSERTADO</ins></p>
+    <p><del>Este texto saldra DELETEADO</del></p>
+
+    <!-- La etiqueta <hr> se utiliza para crear rayas horizontales -->
+    <hr> <!-- Tambien se usa para definir un CORTE TEMATICO -->
+    <hr>
+
+    <!-- La etiqueta <span></span> sirve para dar color al texto -->
+    <h1><span style="color: rgb(48, 194, 162)">This</span> <span style="color:green">is</span> <span style="color: mediumvioletred">it</span>.</h1>
+    
+    <p>Hey this is my <strong>first</strong> WebPage... Im so happy to make it =)
+    </p>
+    <!-- Con style="color: (COLOR)" indicamos el color del <span></span> -->
+    <span style="color: rgb(28, 56, 85)"><p class="quote">Make love, not war.</p></span>
+
+<!-- FORMULARIOS -->
+    <!-- Formularios para pedir datos al usuario -->
+    <form action="form/action_page.php" method="get">
+    <!-- Aqui action indica la pagina donde se envia el formulario -->
+    <!-- El metodo es GET, y la informacion sera visible en el documento -->
+    <input      type="email"             name=""        id=""       min="5"                   required>
+    <!-- Tipo de Input                   Nombre         ID        Caracteres minimos        Requerido -->
+    </form>
+    <form action="form/action_page.php" method="post">
+    <input type="password" name="psw" id="pass1">
+    <!-- Input del tipo password -->
+    <br>
+    <input type="radio"         name="Genero1"      id="Masculino">-Hombre-<br>
+    <input type="radio"         name="Genero2"      id="Femenino">-Mujer-<br>
+    <!-- Input tipo seleccion    Identificando el "name" solo dejaremos que seleccione uno -->
+    <input type="submit" value="Enviar">
+    <br>
+    <!-- El metodo es POST, se usa para tratar informacion sensible. Brinda mayor seguridad -->
+
+    <textarea name="Mensaje" id="formText" cols="30" rows="10" placeholder="Escribe aqui tu mensaje"></textarea>
+    <!-- La etiqueta <Textarea></Textarea> se usa para crear un campo de escritura libre para el usuario. -->
+    </form>
+    </article>
+    </section>
+
+<!-- Alineacion de etiquetas -->
+    <h4 align="center">Este texto estara alieado al CENTRO</h4>
+    <h4 align="left">Este texto estara alieado a la IZQUIERDA</h4>
+    <h4 align="right">Este texto estara alieado a la DERECHA</h4>
+
+    <!-- Definiendo el tamaño de una etiqueta -->
+    <hr width="25%">
+    <!-- Aqui definimos que la etiqueta <hr> utilizara un "width" del 25% -->
+    <p align="center" width="50%">El tamaño de este texto es del 50% y estara alineado al CENTRO</p>
+    <!-- IMPORTANTE EL TEXTO NO PUEDE RECIBIR "width" -->
+
+    <hr width="300px">
+    <!-- Aqui definimos que la etiqueta <hr> utilizara un "width" de 300px -->
+    <p align="right">Este texto estara a la derecha <hr align="left" width="60%"> pero esta linea de arriba estara hacia la izquierda en un 60% de su tamaño.</p>
+
+<!-- Imagenes -->    
+    <!-- Aqui agregamos una imagen simple -->
+    <img src="img/imgCompu.jpg" alt="Imagen Computadora Ejemplo" align="right" width="250px" height="100px" border="5px" >
+    <!-- Source imagen*              Descripcion imagen*            Alineacion       Ancho         Alto       Borde -->
+
+<!-- Enlaces / Links -->
+    <!-- Enlace simple -->
+    <a href="https://www.google.com.ar" target="_blank">Google</a>
+    <!-- Enlace                      Le indicamos que se abra en una nueva Pestaña -->
+    
+    <!-- Enlace desde una Imagen -->
+    <br><br>
+    <a href="https://www.google.com.ar"><img src="img/imgCompu.jpg" target="_blank" alt="" width="5%"></a>
+    <!-- Direccion de Enlace           Imagen anidada dentro de <a></a>     Ancho imagen -->
+
+<!-- LISTAS -->
+    <!-- Listas Ordenadas y Numeradas -->
+    <ol class="asd2" reversed start="7">
+    <!-- Le indicamos a la lista que ira en CONTEO DECRECIENTE desde el numero 7 / REVERSA -->
+
+        <b><li><a href="https://www.google.com.ar" target="_blank">Google</a></li></b>
+        <strong><li>ITEM 2</li></strong>
+        <i><li>ITEM 3</li></i>
+        <sup><li>ITEM 4</li></sup>
+        <sub><li>ITEM 5</li></sub>
+    <!-- Las listas obedecen el compotamiento de los textos -->
+    </ol>
+    <!-- Las listas se numeraran automaticamente sin importar el texto dentro -->
+    <hr class="linea1" align="left" width="15%">
+    <ol class="asd1" type="A">
+    <!-- Le indicamos que enliste con LETRAS MAYUSCULA -->
+        <li>SEGUNDA LISTA</li>
+        <li>SEGUNDA LISTA</li>
+        <li>SEGUNDA LISTA</li>
+        <li>SEGUNDA LISTA</li>
+        <li>SEGUNDA LISTA</li>
+        <li>SEGUNDA LISTA</li>
+    </ol>
+    <!-- Listas Desordenadas -->
+    <ul type="square">
+        <li>LISTA DESORDENADA</li>
+        <li>LISTA DESORDENADA</li>
+        <li>LISTA DESORDENADA</li>
+        <li>LISTA DESORDENADA</li>
+        <li>LISTA DESORDENADA</li>
+        <li>LISTA DESORDENADA</li>
+    </ul>
+
+<!-- TABLAS -->
+    <caption>Titulo de la tabla</caption>
+    <!-- La etiqueta <caption></caption> define el titulo de la tabla -->
+    <!-- TABLA SIMPLE -->
+    <table border="50" bgcolor="rgb(7,5,8)" width="100%">
+        <colgroup>
+    <!-- Se usa para definir estilos de una misma columna -->
+            <col>
+            <col>
+            <col style="background-color: orange;">
+            <col>
+            <col style="background-color:yellow;">
+        </colgroup>
+        <thead>
+    <!-- La etiqueta <thead></thead> define la cabecera de la tabla -->
+        <tr>
+        <!-- <tr></tr> Es la etiqueta de cada FILA -->
+            <th>Mes</th>
+            <th>Entrada</th>
+            <th>Salida</th>
+            <th>Total</th>
+        <!-- <th></th> Se ultiliza para el Table Heading de la tabla -->
+        </tr>
+        </thead>
+        <tbody>
+    <!-- La etiqueta <tbody></tbody> define el cuerpo de una columna -->
+        <tr>
+        <!-- Cada fila necesita una nueva etiqueta <tr></tr> -->
+            <td align="center">Enero</td>
+            <td bgcolor="rgb(5,7,23)">100</td>
+            <td>40</td>
+            <td align="right">60</td>
+        </tr>
+        <tr>
+            <td align="center">Febrero</td>
+            <td bgcolor="rgb(3,2,8)">50</td>
+            <td><b>20</b></td>
+            <td align="right">30</td>
+        </tr>
+        <tr>
+            <td align="center">Marzo</td>
+            <td bgcolor="rgb(2,5,1)">150</td>
+            <td><i>50</i></td>
+            <td align="justify">como sea</td>
+        </tr>
+        <tr>
+            <td align="center">Abril</td>
+            <td bgcolor="rgb(5,4,8)">5</td>
+            <td><h1>30</h1></td>
+            <td align="right"><del>-25</del></td>
+        </tr>
+        <tr>
+            <td><hr color="rgb(2,4,3)"></td>
+            <td colspan="3"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+    <!-- La etiqueta <tfoot></tfoot> define el footer de una tabla -->
+        </tfoot>
+    </table>
+
+    <hr><hr>
+    <table id="calc" border="5" align="center">
+        <tr>
+            <th colspan="4" align="right" width="50%" >0</th>
+        </tr>
+        <tr>
+            <td align="center">C</td>
+            <td>+</td>
+            <td>%</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td rowspan="2">=</td>
+        </tr>
+        <tr>
+            <td colspan="2">0</td>
+            <td>.</td>
+        </tr>
+    </table>
+
+<!-- DIV y SPAN -->
+    <div style="background-color: greenyellow; text-align: center; width: 25%;">
+    <!-- Con STYLE podemos definir estilos CSS dentro de la etiqueta <div></div> -->
+        <p>Esta es una division del documento</p>
+        <p>Esto tambien</p>
+
+    </div>
+
+    <footer>
+    <!-- La etiqueta <footer></footer> designa los elementos que iran al pie de pagina del documento -->
+
+    </footer>
+
+    <form>
+            <fieldset>
+        <!-- Etiqueta <fieldset></fieldset> define un area y la enmarca -->
+              <legend>Información personal</legend>
+        <!-- Etiqueta <legend></legend> genera texto flotante sobre el area enmarcada -->          
+              <label>Nombre:</label>
+        <!-- Etiqueta <label></label> genera texto previo a un campo <input> -->
+              <input type="text"      name="name"     id="name"  placeholder="ingrese el nombre" value="John">
+        <!-- Etiqueta de tipo TEXTO   llamada "NAME"             Marca de agua del <input>       Valor predefinido -->
+              
+              <label>Apellido:</label>
+              <input type="text" name="surname" id="surnme" placeholder="ingrese el apellido">
+              
+              <label>Edad:</label>
+              <input type="number" name="age" id="age" placeholder="ingrese su edad">
+              
+              <label>Fecha de nacimiento:</label>
+              <input type="date" name="birthname" id="birthname">
+              
+              <label>Email:</label>
+              <input type="email" name="email" id="email" required placeholder="usuario@correo.com">
+              
+             </fieldset>
+              
+            <fieldset>
+              <legend>Dirección</legend>
+              
+              <input type="text" name="street" id="street" placeholder="Calle">
+              <input type="number" name="nro" id="nro" placeholder="Numero">
+              <input type="text" name="city" id="city" placeholder="Ciudad">
+              <input type="text" name="privince" id="province" placeholder="Provincia">
+            </fieldset>
+            
+            <input type="submit" value="Enviar"> 
+          </form>
+</body>
+
+</html>
